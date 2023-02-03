@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "gilroy";
+    src: url(./Gilroy-Regular.ttf);
+}
+@font-face {
+    font-family: "gilroy bold";
+    src: url(./Gilroy-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "gilroy";
+    overflow-x: hidden;
+    /* overflow: hidden; */
+}
+
+#left{
+    position: absolute;
+    width: 70vw;
+    height: 100%;
+    background-color: rgba(39, 94, 161, 0.63);
+}
+#right{
+    position: absolute;
+    width: 30vw;
+    height: 100%;
+    right: 0;
+    background-color: rgba(153, 66, 120, 0.466);
+}
+#circle{
+    position: absolute;
+    width: 27vw;
+    height: 27vw;
+    border-radius: 50%;
+    top: 9vw;
+    right: 16vw;
+    /* background-color: #fff; */
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1541599188778-cdc73298e8fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1940&q=80")
+}
+#c1{
+    position: absolute;
+    width: 33vw;
+    height: 33vw;
+    border-radius: 50%;
+    border: 3px solid white;
+    top: 6vw;
+    right: 13vw;
+    /* animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+}
+
+
+
+
+
+
+#nav{
+   position: absolute;
+   height: 20px;
+   width: 70%;
+   top: 3vw;
+   color: white;
+   text-transform: uppercase;
+   display: flex;
+   align-items: center;
+   justify-content: space-around; 
+   cursor: pointer;
+}
+#nav2{
+    position: relative;
+    height: 20px;
+    width: 10vw;
+    left: 18vw;
+    color: white;
+    display: flex;
+    align-items: center;
+   justify-content: space-between; 
+   top: 3vw;
+   cursor: pointer;  
+}
+#searchbar{
+    position: absolute;
+    /* display: none; */
+    width: 0;
+    height: 3vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    top: 2vw;
+    left: 5vw;
+    transition: ease-in-out 1s;
+
+}
+#menu{
+    display: none;
+}
+#searchbar h3{
+    position: absolute;
+    left: 2vw;
+    color: grey;
+    opacity: 0;
+    top: .7vw;
+    font-size: 15px;
+}
+
+#sidebar{
+    position: absolute;
+    width: 5vw;
+    height: 10vw;
+    background-color: white;
+    right: 0;
+    top: 17vw;
+    cursor: pointer;
+    
+}
+#sidebar h2:hover{
+    opacity: 0.5;
+}
+#icons{
+    position: absolute;
+    top: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    left: 2vw;
+}
+#content{
+    color: rgba(255, 255, 255, 0.984);
+    position: absolute;
+    font-size: 55px;
+    font-weight: 900;
+    top: 9vw;
+    left: 5vw;
+}
+#content h1{
+    opacity: 1;
+    font-family: "gilroy bold";
+}
+#content h6{
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 50px;
+    font-weight: 100;
+}
+#desc{
+    position: absolute;
+    width: 25vw;
+    height: 6vw;
+    background-color: rgba(255, 255, 255, 0.991);
+    bottom: 3vw;
+    left: 20vw;
+}
+#desc p{
+    position: relative;
+    top: 1vw;
+    left: 1vw;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+@media(max-width: 500px) { 
+    /* #main{
+        display: flex;
+        flex-direction: column;
+    } */
+
+    #right{
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 40%;
+    }
+    
+    #left{
+        width: 100%;
+        height: 60%;
+    }
+    #content{
+        font-size: 30px;
+    }
+    #desc{
+        top: 68%;
+        width: 65%;
+        height: 12%;
+        left: 5vw;
+        color: rgba(52, 51, 51, 0.913);
+        border: 1px solid grey;
+    }
+    #desc p{
+        top: 1%;
+        left: 5%;
+    }
+    #circle{
+        top: 55%;
+        left: 30%;
+        width: 45vw;
+        height: 45vw;
+        border-radius: 50%;
+    }
+    #c1{
+        top: 52%;
+        left: 26%;
+        width: 55vw;
+        height: 55vw;
+    }
+    #nav{
+        display: none;
+    }
+    #nav2{
+        display: none;
+    }
+    #sidebar{
+        left: 25%;
+        /* bottom: 3%; */
+        width: 0;
+    }
+    #icons{
+        /* width: 100%; */
+        /* background-color: red; */
+       display: flex;
+       flex-direction: row;
+       gap: 25px;
+       /* margin-top: 30%; */
+       top: 40vw;
+       color: rgb(63, 62, 62);;
+    }
+    #icons h2{
+       border: 2px solid rgb(63, 62, 62);
+       border-radius: 50%;
+       width: 40px;
+       height: 40px;
+       padding: 3%;
+
+    }
+    #menu{
+        display: block;
+        font-size: 35px;
+        color: rgba(255, 255, 255, 0.719);
+        font-weight: 100;
+        position: absolute;
+        right: 4%;
+        top: 3%;
+
+    }   
+}
